@@ -2,9 +2,9 @@
   "devices": [
     {
       "id": "1",
-      "name": "Устройство 111",
+      "name": "Устройство 1",
       "type": "Термостат",
-      "status": "online",
+      "status": "offline",
       "last_active": "2025-06-27T19:00:00Z"
     },
     {

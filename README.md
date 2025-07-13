@@ -101,6 +101,7 @@ json-server --watch db.json --port 3001
 - 13.07 - service, store, routing - 15 min
 - 13.07 - vuetify, table with filters and search - 30 min
 - 13.07 - editing data - 60 min
+- 13.07 - refactoring - 60 min
 
 ## Задачи
 
@@ -120,6 +121,7 @@ json-server --watch db.json --port 3001
 ### Enhancements
 - in header add toggle dark-light theme
 - in app add loading animation
+- in edit update the last_active value
 
 ### Bugs
 - 

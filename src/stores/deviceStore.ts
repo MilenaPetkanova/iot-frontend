@@ -1,11 +1,13 @@
 import { defineStore } from 'pinia'
-import { ref } from 'vue'
+import { ref, computed } from 'vue'
 import type { Device } from '@/types/device'
 import * as deviceService from '@/api/deviceService'
 
 export const useDeviceStore = defineStore('device', () => {
   const devices = ref<Device[]>([])
   const isLoading = ref(false)
+  const isModalOpen = ref(false)
+  const selectedDevice = ref<Device | null>(null)
 
   const fetchDevices = async () => {
     isLoading.value = true
@@ -26,15 +28,36 @@ export const useDeviceStore = defineStore('device', () => {
       if (index !== -1) {
         devices.value[index] = savedDevice
       }
+      closeModal()
     } catch (error) {
       console.error('Error updating device:', error)
     }
   }
 
+  function openModal(device: Device | null = null) {
+    selectedDevice.value = device
+    isModalOpen.value = true
+  }
+
+  function closeModal() {
+    isModalOpen.value = false
+    selectedDevice.value = null
+  }
+
+  const deviceTypes = computed(() => {
+    const all = devices.value.map((device: Device) => device.type)
+    return [...new Set(all)]
+  })
+
   return {
     devices,
     isLoading,
     fetchDevices,
-    updateDevice
+    updateDevice,
+    isModalOpen,
+    selectedDevice,
+    openModal,
+    closeModal,
+    deviceTypes
   }
 })
