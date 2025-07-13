@@ -11,6 +11,9 @@ import * as components from 'vuetify/components'
 import * as directives from 'vuetify/directives'
 import { aliases, mdi } from 'vuetify/iconsets/mdi'
 
+// import 'vue3-toastify/dist/index.css'
+// import { ToastContainer, toast } from 'vue3-toastify'
+
 import './assets/css/general.css'
 import './assets/css/utilities.css'
 
@@ -38,4 +41,5 @@ const app = createApp(App)
 app.use(router)
 app.use(createPinia())
 app.use(vuetify)
+// app.component('ToastContainer', ToastContainer)
 app.mount('#app')

@@ -100,24 +100,26 @@ json-server --watch db.json --port 3001
 - 13.07 - migrate from webpack to vite - 30 min
 - 13.07 - service, store, routing - 15 min
 - 13.07 - vuetify, table with filters and search - 30 min
+- 13.07 - editing data - 60 min
 
 ## Задачи
 
 ### Todos
 + init and config
 + create structure and architecture
-+ create table with fiters and search
++ create table with filters and search
 + format date/time
-- create edit modal
-- validate the edit form
++ create edit modal
++ validate the edit form
 - create details modal
 - visualize the additional related mock data
-- check if all requirement are met
+- check if all requirements are met
 - check for refactoring
 - adjust the responsiveness
 
 ### Enhancements
-- In header add toggle dark-light theme
+- in header add toggle dark-light theme
+- in app add loading animation
 
 ### Bugs
 - 
