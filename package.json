@@ -10,10 +10,13 @@
     "lint": "eslint --ext .ts,.vue src"
   },
   "dependencies": {
+    "@mdi/font": "^7.4.47",
     "axios": "^1.10.0",
     "pinia": "^3.0.3",
+    "sass": "^1.89.2",
     "vue": "^3.5.17",
-    "vue-router": "^4.5.1"
+    "vue-router": "^4.5.1",
+    "vuetify": "^3.5.0"
   },
   "devDependencies": {
     "@types/node": "^24.0.13",
@@ -28,6 +31,7 @@
     "prettier": "^3.6.2",
     "typescript": "~5.8.3",
     "vite": "^7.0.4",
+    "vite-plugin-vuetify": "^2.1.1",
     "vue-eslint-parser": "^10.2.0",
     "vue-tsc": "^2.2.12"
   }

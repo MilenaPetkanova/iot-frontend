@@ -1,0 +1,43 @@
+@import './reset.css';
+@import './fonts.css';
+
+:root {
+  --border-width: 3px;
+}
+
+::selection {
+  background-color: pink;
+  color: black;
+}
+
+::-moz-selection {
+  background-color: pink;
+  color: black;
+}
+
+::-webkit-scrollbar {
+  width: 12px;
+}
+
+::-webkit-scrollbar-track {
+  background: black;
+}
+
+::-webkit-scrollbar-thumb {
+  background: pink;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html,
+body {
+  font-family: 'SofiaSans', sans-serif; 
+  font-size: 16px;
+  line-height: 160%;
+  font-weight: 500;
+  color: pink;
+  background-color: black;
+  transition: all 0.3s ease;
+}

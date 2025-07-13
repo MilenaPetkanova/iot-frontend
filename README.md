@@ -87,24 +87,42 @@ json-server --watch db.json --port 3001
 - При необходимост инструкции за стартиране или обяснение на кода
 
 
-
-# Бележки
+# Бележки от автора
 
 ## Въпроси
 - В 2.2 Добавяне и редактиране на устройство - При редакция, предварително попълнете текущите стойности
+- В 1. История на състоянието им?
 
 ## Време:
 - 12.07 - init - 60 min
 - 12.07 - service, store, routing - 40 min
 - 12.07 - fix dependency issues - 60 min
+- 13.07 - migrate from webpack to vite - 30 min
+- 13.07 - service, store, routing - 15 min
+- 13.07 - vuetify, table with filters and search - 30 min
 
 ## Задачи
 
 ### Todos
-- 
++ init and config
++ create structure and architecture
++ create table with fiters and search
++ format date/time
+- create edit modal
+- validate the edit form
+- create details modal
+- visualize the additional related mock data
+- check if all requirement are met
+- check for refactoring
+- adjust the responsiveness
+
+### Enhancements
+- In header add toggle dark-light theme
 
 ### Bugs
 - 
 
 ### Refactoring
-- in package.json check if i need --watch
+- check it shims files can be added in a folder
+- remove unused fonts
+- move devices list title in the view 
