@@ -31,6 +31,6 @@ export default [
         trailingComma: 'none',
         endOfLine: 'auto'
       }]
-    }
+    },
   }
 ]
