@@ -25,7 +25,9 @@ body {
   font-size: 16px;
   line-height: 160%;
   font-weight: 500;
-  color: white;
-  background-color: black;
-  transition: all 0.3s ease;
+}
+
+h1, h2, h3, h4, h5, h6 {
+  font-weight: 700;
+  font-family: 'SofiaSans', sans-serif; 
 }

@@ -17,6 +17,16 @@ const routes: RouteRecordRaw[] = [
     path: `/${ROUTE_NAMES.DEVICES}/:id`,
     name: 'DevicesDetails',
     component: DevicesDetails
+  },
+  {
+    path: `/${ROUTE_NAMES.REQUIREMENTS}`,
+    name: 'Requirements',
+    component: () => import('@/views/Static/Requirements.vue')
+  },
+  {
+    path: `/${ROUTE_NAMES.NOTES}`,
+    name: 'Notes',
+    component: () => import('@/views/Static/Notes.vue')
   }
 ]
 

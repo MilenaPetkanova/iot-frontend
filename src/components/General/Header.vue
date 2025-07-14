@@ -16,6 +16,14 @@
         >
           {{ link.label }}
         </v-btn>
+        <v-btn
+          href="https://github.com/MilenaPetkanova/iot-frontend"
+          target="_blank"
+          rel="noopener"
+          variant="plain"
+        >
+          КОД
+        </v-btn>
       </v-row>
 
       <!-- Mobile menu toggle -->
@@ -55,12 +63,12 @@ const router = useRouter()
 const drawer = ref(false)
 
 const goHome = () => {
-  router.push({ name: 'devices' })
+  router.push({ name: 'DevicesList' })
 }
 
 const navLinks = [
-  { label: 'Задание', to: { name: 'DevicesList' } },
-  { label: 'Бележки', to: { name: 'DevicesList' } },
+  { label: 'Задание', to: { name: 'Requirements' } },
+  { label: 'Бележки', to: { name: 'Notes' } },
   { label: 'Решение', to: { name: 'DevicesList' } }
 ]
 </script>

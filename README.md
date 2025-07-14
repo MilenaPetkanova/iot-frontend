@@ -89,9 +89,37 @@ json-server --watch db.json --port 3001
 
 # Бележки от автора
 
-## Въпроси
-- В 2.2 Добавяне и редактиране на устройство - При редакция, предварително попълнете текущите стойности
-- В 1. История на състоянието им?
+## Задачи
+
+### Todos
+- [x] init and config
+- [x] create structure and architecture
+- [x] create table with filters and search
+- [x] format date/time
+- [x] create edit modal
+- [x] validate the edit form
+- [x] create details page
+- [x] visualize the additional related mock data
+- [ ] check enhancement, bugs and refactoring tasks
+- [ ] enhance the styles
+- [ ] adjust the responsiveness
+- [ ] check again if all requirements are met
+
+### Enhancements
+- [ ] in app add loading animation
+- [ ] in data table center the text and differentiate its header
+- [x] create pages задание, задачи, решение 
+
+### Bugs
+- [ ] in db ids are transformed from numbers to strings
+
+### Refactoring
+- [ ] check it shims files can be added in a folder
+- [ ] remove unused fonts
+- [x] move devices list title in the view 
+- [x] in views rename dashboard to devices
+- [x] add constants (minimum for routes)
+- [x] add enums (minimum for statuses)
 
 ## Време:
 - 12.07 - init - 60 min
@@ -102,35 +130,3 @@ json-server --watch db.json --port 3001
 - 13.07 - vuetify, table with filters and search - 30 min
 - 13.07 - editing data - 60 min
 - 13.07 - refactoring - 60 min
-
-## Задачи
-
-### Todos
-+ init and config
-+ create structure and architecture
-+ create table with filters and search
-+ format date/time
-+ create edit modal
-+ validate the edit form
-+ create details page
-+ visualize the additional related mock data
-- check enhancement, bugs and refactoring tasks
-- enhance the styles
-- adjust the responsiveness
-- check again if all requirements are met
-
-### Enhancements
-- in app add loading animation
-- in data table center the text and differentiate its header
-- create pages задание, задачи, решение 
-
-### Bugs
-- in db ids are transformed from numbers to strings
-
-### Refactoring
-- check it shims files can be added in a folder
-- remove unused fonts
-+ move devices list title in the view 
-+ in views rename dashboard to devices
-+ add constants (minimum for routes)
-+ add enums (minimum for statuses)
