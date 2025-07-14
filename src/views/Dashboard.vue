@@ -8,13 +8,10 @@
     <DeviceList />
 
     <DeviceEditModal />
-
-    <DeviceDetailsModal />
   </v-container>
 </template>
 
 <script setup lang="ts">
 import DeviceList from '@/components/Device/List.vue'
 import DeviceEditModal from '@/components/Device/EditModal.vue'
-import DeviceDetailsModal from '@/components/Device/DetailsModal.vue'
 </script>
