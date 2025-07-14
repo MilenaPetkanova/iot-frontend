@@ -1,7 +1,7 @@
 <template>
   <v-app>
     <GeneralHeader></GeneralHeader>
-    <v-main>
+    <v-main class="py-20">
       <router-view />
     </v-main>
   </v-app>

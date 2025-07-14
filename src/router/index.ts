@@ -1,26 +1,26 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import Dashboard from '@/views/Dashboard.vue'
-import DeviceDetails from '@/views/DeviceDetails.vue'
+import DevicesList from '@/views/DevicesList.vue'
+import DevicesDetails from '@/views/DevicesDetails.vue'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/dashboard'
+    redirect: '/devices'
   },
   {
-    path: '/dashboard',
+    path: '/devices',
     name: 'Dashboard',
-    component: Dashboard
+    component: DevicesList
   },
   {
     path: '/devices/:id',
-    name: 'DeviceDetails',
-    component: DeviceDetails
+    name: 'DevicesDetails',
+    component: DevicesDetails
   }
 ]
 
 const router = createRouter({
-  history: createWebHistory(import.meta.env.BASE_URL), // use import.meta.env.BASE_URL for Vite
+  history: createWebHistory(import.meta.env.BASE_URL),
   routes
 })
 
