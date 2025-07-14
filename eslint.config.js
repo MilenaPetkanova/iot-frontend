@@ -15,6 +15,9 @@ export default [
         parser: tsparser,
         ecmaVersion: 'latest',
         sourceType: 'module'
+      },
+      globals: {
+        console: 'readonly'
       }
     },
     plugins: {
