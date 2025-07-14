@@ -1,5 +1,5 @@
 export interface Device {
-  id: number // unique identifier
+  id: number
   name: string
   type: 'Водомер' | 'Реле' | 'Сензор' | string
   status: 'online' | 'offline' | 'unknown'

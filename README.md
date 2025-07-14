@@ -112,21 +112,26 @@ json-server --watch db.json --port 3001
 + format date/time
 + create edit modal
 + validate the edit form
-- create details modal
-- visualize the additional related mock data
-- check if all requirements are met
-- check for refactoring
++ create details page
++ visualize the additional related mock data
+- check enhancement, bugs and refactoring tasks
+- enhance the styles
 - adjust the responsiveness
+- check again if all requirements are met
 
 ### Enhancements
 - in header add toggle dark-light theme
 - in app add loading animation
 - in edit update the last_active value
+- in data table center the text and differentiate its header
+- create pages задание, задачи, решение 
 
 ### Bugs
-- 
+- in db ids are transforming from numbers to strings
 
 ### Refactoring
 - check it shims files can be added in a folder
 - remove unused fonts
 - move devices list title in the view 
+- in views rename dashboard to devices
+- add constants (minimum for routes)

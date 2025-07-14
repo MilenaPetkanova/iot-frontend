@@ -1,5 +1,6 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
-import DashboardView from '@/views/Dashboard.vue'
+import Dashboard from '@/views/Dashboard.vue'
+import DeviceDetails from '@/views/DeviceDetails.vue'
 
 const routes: RouteRecordRaw[] = [
   {
@@ -9,7 +10,12 @@ const routes: RouteRecordRaw[] = [
   {
     path: '/dashboard',
     name: 'Dashboard',
-    component: DashboardView
+    component: Dashboard
+  },
+  {
+    path: '/devices/:id',
+    name: 'DeviceDetails',
+    component: DeviceDetails
   }
 ]
 

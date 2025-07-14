@@ -1,5 +1,5 @@
 export function useDateFormat() {
-  function formatDateToBG(dateStr: string | Date): string {
+  function formatDateToBG(dateStr: string): string {
     const date = new Date(dateStr)
     const bgTime = new Date(
       date.toLocaleString('en-US', { timeZone: 'Europe/Sofia' })

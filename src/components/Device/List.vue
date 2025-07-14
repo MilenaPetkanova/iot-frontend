@@ -27,16 +27,20 @@
       :items="filteredDevices"
       item-value="id"
       class="elevation-1"
-      @click:row="onRowClick"
+      @click:row="handleRowClick"
     >
-      <template #item.last_active="{ item }">
-        {{ formatDateToBG((item as Device).last_active) }}
-      </template>
-
-      <template #item.actions="{ item }">
-        <v-btn icon @click.stop="openEditModal(item)">
-          <v-icon>mdi-pencil</v-icon>
-        </v-btn>
+      <template #item="{ item }">
+        <tr @click="handleRowClick(item)">
+          <td>{{ item.name }}</td>
+          <td>{{ item.type }}</td>
+          <td>{{ item.status }}</td>
+          <td>{{ formatDateToBG(item.last_active) }}</td>
+          <td>
+            <v-btn @click.stop="openEditModal(item)"
+              ><v-icon>mdi-pencil</v-icon></v-btn
+            >
+          </td>
+        </tr>
       </template>
     </v-data-table>
   </div>
@@ -44,8 +48,9 @@
 
 <script setup lang="ts">
 import { ref, computed, onMounted } from 'vue'
-import { useDeviceStore } from '@/stores/deviceStore'
+import { useRouter } from 'vue-router'
 import type { Device } from '@/types/device'
+import { useDeviceStore } from '@/stores/deviceStore'
 import { useDateFormat } from '@/composables/useDateFormat'
 
 const store = useDeviceStore()
@@ -83,15 +88,30 @@ const filteredDevices = computed(() =>
 
 onMounted(() => {
   store.fetchDevices()
-  // console.log('store.devicesTypesSet :>> ', store.devicesTypesSet)
 })
 
 const openEditModal = (device: Device) => {
-  store.isModalOpen = true
+  store.isEditModalOpen = true
   store.selectedDevice = { ...device }
 }
 
-const onRowClick = (device: Device) => {
-  console.log('device:', device)
+const handleRowClick = (device: Device) => {
+  // store.isDetailsModalOpen = true
+  store.selectedDevice = { ...device }
+  const router = useRouter()
+  router.push({
+    path: '/devices/' + device.id
+  })
 }
 </script>
+
+<style lang="scss" scoped>
+tr:hover {
+  cursor: pointer;
+}
+
+td,
+th {
+  vertical-align: middle;
+}
+</style>

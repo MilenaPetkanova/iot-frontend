@@ -1,13 +1,7 @@
 <template>
-  <v-dialog v-model="store.isModalOpen" max-width="600px">
+  <v-dialog v-model="store.isEditModalOpen" max-width="600px">
     <v-card>
-      <v-card-title>
-        {{
-          store.selectedDevice
-            ? 'Редакция на устройство'
-            : 'Добавяне на устройство'
-        }}
-      </v-card-title>
+      <v-card-title> Редакция на устройство </v-card-title>
 
       <v-card-text>
         <v-form ref="form" v-model="valid" lazy-validation>
@@ -39,7 +33,7 @@
 
       <v-card-actions>
         <v-spacer />
-        <v-btn text @click="store.closeModal()">Затвори</v-btn>
+        <v-btn text @click="store.closeEditModal()">Затвори</v-btn>
         <v-btn color="primary" @click="submit">Запази</v-btn>
       </v-card-actions>
     </v-card>
@@ -69,7 +63,7 @@ const rules = {
 }
 
 watch(
-  () => store.isModalOpen,
+  () => store.isEditModalOpen,
   (open) => {
     if (open && store.selectedDevice) {
       localDevice.value = { ...store.selectedDevice }
