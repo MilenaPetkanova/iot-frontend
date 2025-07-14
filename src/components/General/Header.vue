@@ -2,7 +2,7 @@
   <v-app-bar absolute>
     <v-container fluid class="d-flex align-center justify-between">
       <v-app-bar-title class="cursor-pointer" @click="goHome">
-        Устройства
+        frontend iot
       </v-app-bar-title>
 
       <!-- Desktop navigation -->

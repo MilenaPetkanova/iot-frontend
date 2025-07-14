@@ -1,11 +1,11 @@
 <template>
-  <v-container fluid>
-    <DeviceHeader title="Устройство" />
+  <v-container>
+    <ViewTitle title="Устройство" hasBackBtn />
     <DeviceDetails />
   </v-container>
 </template>
 
 <script setup lang="ts">
-import DeviceHeader from '@/components/Device/Header.vue'
+import ViewTitle from '@/components/General/ViewTitle.vue'
 import DeviceDetails from '@/components/Device/Details.vue'
 </script>
