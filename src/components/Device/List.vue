@@ -52,6 +52,7 @@ import { useRouter } from 'vue-router'
 import type { Device } from '@/types/device'
 import { useDeviceStore } from '@/stores/deviceStore'
 import { useDateFormat } from '@/composables/useDateFormat'
+import { DeviceStatus } from '@/enums/statuses'
 import { ROUTE_NAMES } from '@/constants/routes'
 
 const store = useDeviceStore()
@@ -71,7 +72,11 @@ const headers = [
   { title: 'Действия', key: 'actions', sortable: false }
 ]
 
-const statuses = ['online', 'offline', 'unknown']
+const statuses = [
+  DeviceStatus.ONLINE,
+  DeviceStatus.OFFLINE,
+  DeviceStatus.UNKNOWN
+]
 
 const filteredDevices = computed(() =>
   store.devices.filter((device: Device) => {

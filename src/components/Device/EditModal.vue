@@ -17,9 +17,9 @@
             label="Тип"
           />
           <v-radio-group v-model="localDevice.status" label="Статус">
-            <v-radio label="Онлайн" value="online" />
-            <v-radio label="Офлайн" value="offline" />
-            <v-radio label="Неизвестен" value="unknown" />
+            <v-radio label="Онлайн" :value="DeviceStatus.ONLINE" />
+            <v-radio label="Офлайн" :value="DeviceStatus.OFFLINE" />
+            <v-radio label="Неизвестен" :value="DeviceStatus.UNKNOWN" />
           </v-radio-group>
         </v-form>
       </v-card-text>
@@ -37,6 +37,7 @@
 import { ref, watch } from 'vue'
 import { useDeviceStore } from '@/stores/deviceStore'
 import type { Device } from '@/types/device'
+import { DeviceStatus } from '@/enums/statuses'
 
 const store = useDeviceStore()
 

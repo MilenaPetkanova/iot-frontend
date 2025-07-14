@@ -120,18 +120,17 @@ json-server --watch db.json --port 3001
 - check again if all requirements are met
 
 ### Enhancements
-- in header add toggle dark-light theme
 - in app add loading animation
 - in data table center the text and differentiate its header
 - create pages задание, задачи, решение 
 
 ### Bugs
-- in db ids are transforming from numbers to strings
+- in db ids are transformed from numbers to strings
 
 ### Refactoring
 - check it shims files can be added in a folder
 - remove unused fonts
-- move devices list title in the view 
-- in views rename dashboard to devices
++ move devices list title in the view 
++ in views rename dashboard to devices
 + add constants (minimum for routes)
-- add enums (minimum for statuses)
++ add enums (minimum for statuses)

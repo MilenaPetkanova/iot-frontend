@@ -46,6 +46,7 @@ import DeviceLineChart from '@/components/Device/LineChart.vue'
 import type { Device } from '@/types/device'
 import type { DeviceReading } from '@/types/deviceReading'
 import { useDateFormat } from '@/composables/useDateFormat'
+import { DeviceStatus } from '@/enums/statuses'
 
 const route = useRoute()
 const store = useDeviceStore()
@@ -64,11 +65,11 @@ onMounted(async () => {
 
 const statusColor = computed(() => {
   switch (device.value?.status) {
-    case 'online':
+    case DeviceStatus.ONLINE:
       return 'green'
-    case 'offline':
+    case DeviceStatus.OFFLINE:
       return 'red'
-    case 'unknown':
+    case DeviceStatus.UNKNOWN:
       return 'amber'
     default:
       return 'grey'
