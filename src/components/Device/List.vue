@@ -52,8 +52,11 @@ import { useRouter } from 'vue-router'
 import type { Device } from '@/types/device'
 import { useDeviceStore } from '@/stores/deviceStore'
 import { useDateFormat } from '@/composables/useDateFormat'
+import { ROUTE_NAMES } from '@/constants/routes'
 
 const store = useDeviceStore()
+const router = useRouter()
+
 const { formatDateToBG } = useDateFormat()
 
 const search = ref('')
@@ -96,11 +99,8 @@ const openEditModal = (device: Device) => {
 }
 
 const handleRowClick = (device: Device) => {
-  // store.isDetailsModalOpen = true
-  store.selectedDevice = { ...device }
-  const router = useRouter()
   router.push({
-    path: '/devices/' + device.id
+    path: `/${ROUTE_NAMES.DEVICES}/${device.id}`
   })
 }
 </script>

@@ -1,19 +1,20 @@
 import { createRouter, createWebHistory, type RouteRecordRaw } from 'vue-router'
 import DevicesList from '@/views/DevicesList.vue'
 import DevicesDetails from '@/views/DevicesDetails.vue'
+import { ROUTE_NAMES } from '@/constants/routes'
 
 const routes: RouteRecordRaw[] = [
   {
     path: '/',
-    redirect: '/devices'
+    redirect: `/${ROUTE_NAMES.DEVICES}`
   },
   {
-    path: '/devices',
-    name: 'Dashboard',
+    path: `/${ROUTE_NAMES.DEVICES}`,
+    name: 'DevicesList',
     component: DevicesList
   },
   {
-    path: '/devices/:id',
+    path: `/${ROUTE_NAMES.DEVICES}/:id`,
     name: 'DevicesDetails',
     component: DevicesDetails
   }

@@ -70,6 +70,7 @@ import { Chart, registerables } from 'chart.js'
 import { LineChart, useLineChart } from 'vue-chart-3'
 import 'chartjs-adapter-date-fns'
 import type { DeviceReading } from '@/types/deviceReading'
+import { useDateFormat } from '@/composables/useDateFormat'
 
 Chart.register(...registerables)
 
@@ -91,12 +92,10 @@ export default defineComponent({
     const startDate = ref<Date | null>(null)
     const endDate = ref<Date | null>(null)
 
-    // TODO: use the existing composable
-    const formatDate = (dateRaw: Date | null) =>
-      dateRaw ? new Date(dateRaw).toLocaleDateString('bg-BG') : ''
+    const { formatDateToBG } = useDateFormat()
 
-    const startDateFormatted = computed(() => formatDate(startDate.value))
-    const endDateFormatted = computed(() => formatDate(endDate.value))
+    const startDateFormatted = computed(() => formatDateToBG(startDate.value))
+    const endDateFormatted = computed(() => formatDateToBG(endDate.value))
 
     const minDate = computed(() => {
       if (!props.deviceReadings.length) return null

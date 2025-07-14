@@ -1,7 +1,7 @@
 <template>
   <v-dialog v-model="store.isEditModalOpen" max-width="600px">
     <v-card>
-      <v-card-title> Редакция на устройство </v-card-title>
+      <v-card-title>Редакция на устройство</v-card-title>
 
       <v-card-text>
         <v-form ref="form" v-model="valid" lazy-validation>
@@ -15,15 +15,8 @@
             v-model="localDevice.type"
             :items="store.deviceTypes"
             label="Тип"
-            :rules="[rules.required]"
-            required
           />
-          <v-radio-group
-            v-model="localDevice.status"
-            :rules="[rules.required]"
-            label="Статус"
-            required
-          >
+          <v-radio-group v-model="localDevice.status" label="Статус">
             <v-radio label="Онлайн" value="online" />
             <v-radio label="Офлайн" value="offline" />
             <v-radio label="Неизвестен" value="unknown" />
@@ -33,7 +26,7 @@
 
       <v-card-actions>
         <v-spacer />
-        <v-btn text @click="store.closeEditModal()">Затвори</v-btn>
+        <v-btn @click="store.closeEditModal()">Затвори</v-btn>
         <v-btn color="primary" @click="submit">Запази</v-btn>
       </v-card-actions>
     </v-card>
@@ -47,13 +40,15 @@ import type { Device } from '@/types/device'
 
 const store = useDeviceStore()
 
-const localDevice = ref<Device>({
+const emptyDevice: Device = {
   id: 0,
   name: '',
   type: '',
   status: 'unknown',
   last_active: new Date().toISOString()
-})
+}
+
+const localDevice = ref<Device>(emptyDevice)
 
 const valid = ref(false)
 const form = ref()
@@ -68,13 +63,7 @@ watch(
     if (open && store.selectedDevice) {
       localDevice.value = { ...store.selectedDevice }
     } else {
-      localDevice.value = {
-        id: 0,
-        name: '',
-        type: '',
-        status: 'unknown',
-        last_active: new Date().toISOString()
-      }
+      localDevice.value = emptyDevice
     }
   },
   { immediate: true }
