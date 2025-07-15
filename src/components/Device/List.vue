@@ -58,7 +58,7 @@ import { useRouter } from 'vue-router'
 import type { Device } from '@/types/device'
 import { useDeviceStore } from '@/stores/deviceStore'
 import { useDateFormat } from '@/composables/useDateFormat'
-import { DeviceStatus } from '@/enums/statuses'
+import { DeviceStatus } from '@/enums/deviceStatuses'
 import { ROUTE_NAMES } from '@/constants/routes'
 
 const store = useDeviceStore()
@@ -102,6 +102,7 @@ const filteredDevices = computed(() =>
 
 onMounted(() => {
   store.fetchDevices()
+  console.log(store.deviceTypes)
 })
 
 const openEditModal = (device: Device) => {

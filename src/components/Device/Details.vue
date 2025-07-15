@@ -60,7 +60,7 @@ import { useRoute } from 'vue-router'
 import { useDeviceStore } from '@/stores/deviceStore'
 import DeviceLineChart from '@/components/Device/LineChart.vue'
 import { useDateFormat } from '@/composables/useDateFormat'
-import { DeviceStatus } from '@/enums/statuses'
+import { DeviceStatus } from '@/enums/deviceStatuses'
 
 const route = useRoute()
 const store = useDeviceStore()

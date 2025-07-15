@@ -37,7 +37,7 @@
 import { ref, watch } from 'vue'
 import { useDeviceStore } from '@/stores/deviceStore'
 import type { Device } from '@/types/device'
-import { DeviceStatus } from '@/enums/statuses'
+import { DeviceStatus } from '@/enums/deviceStatuses'
 
 const store = useDeviceStore()
 

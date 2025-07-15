@@ -3,6 +3,7 @@ import { ref, computed } from 'vue'
 import type { Device } from '@/types/device'
 import type { DeviceReading } from '@/types/deviceReading'
 import * as deviceService from '@/api/deviceService'
+import { DeviceTypes } from '@/constants/deviceTypes'
 
 export const useDeviceStore = defineStore('device', () => {
   const devices = ref<Device[]>([])
@@ -49,8 +50,7 @@ export const useDeviceStore = defineStore('device', () => {
   }
 
   const deviceTypes = computed(() => {
-    const all = devices.value.map((device: Device) => device.type)
-    return [...new Set(all)]
+    return Object.values(DeviceTypes)
   })
 
   const fetchDeviceReadings = async (deviceId: number) => {

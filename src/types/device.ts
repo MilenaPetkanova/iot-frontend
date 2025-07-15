@@ -1,4 +1,4 @@
-import { DeviceStatusType } from '@/enums/statuses'
+import { DeviceStatusType } from '@/enums/deviceStatuses'
 
 export interface Device {
   id: number
