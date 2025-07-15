@@ -8,7 +8,6 @@ export const useDeviceStore = defineStore('device', () => {
   const devices = ref<Device[]>([])
   const isLoading = ref(false)
   const isEditModalOpen = ref(false)
-  const isDetailsModalOpen = ref(false)
   const selectedDevice = ref<Device | null>(null)
   const deviceReadings = ref<DeviceReading[]>([])
 
@@ -76,16 +75,6 @@ export const useDeviceStore = defineStore('device', () => {
     selectedDevice.value = null
   }
 
-  function openDetailsModal(device: Device | null = null) {
-    selectedDevice.value = device
-    isDetailsModalOpen.value = true
-  }
-
-  function closeDetailsModal() {
-    isDetailsModalOpen.value = false
-    selectedDevice.value = null
-  }
-
   return {
     devices,
     isLoading,
@@ -93,14 +82,11 @@ export const useDeviceStore = defineStore('device', () => {
     fetchDeviceById,
     updateDevice,
     isEditModalOpen,
-    isDetailsModalOpen,
     selectedDevice,
     deviceTypes,
     deviceReadings,
     fetchDeviceReadings,
     openEditModal,
-    closeEditModal,
-    openDetailsModal,
-    closeDetailsModal
+    closeEditModal
   }
 })

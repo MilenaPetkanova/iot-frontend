@@ -1,6 +1,11 @@
 <template>
-  <div>
-    <v-row dense>
+  <div class="line-chart">
+    <v-label
+      class="text-uppercase text-caption text-grey-lighten-1 letter-spacing mb-3"
+    >
+      История на състоянито
+    </v-label>
+    <v-row>
       <!-- Start Date Field -->
       <v-col cols="12" md="6">
         <v-menu
@@ -65,7 +70,7 @@
 </template>
 
 <script lang="ts">
-import { ref, computed, defineComponent } from 'vue'
+import { ref, computed, defineComponent, watchEffect } from 'vue'
 import { Chart, registerables } from 'chart.js'
 import { LineChart, useLineChart } from 'vue-chart-3'
 import 'chartjs-adapter-date-fns'
@@ -99,7 +104,6 @@ export default defineComponent({
 
     const minDate = computed(() => {
       if (!props.deviceReadings.length) return null
-
       return props.deviceReadings.reduce(
         (min, r) => (r.timestamp < min ? r.timestamp : min),
         props.deviceReadings[0].timestamp
@@ -108,11 +112,17 @@ export default defineComponent({
 
     const maxDate = computed(() => {
       if (!props.deviceReadings.length) return null
-
       return props.deviceReadings.reduce(
         (max, r) => (r.timestamp > max ? r.timestamp : max),
         props.deviceReadings[0].timestamp
       )
+    })
+
+    watchEffect(() => {
+      if (props.deviceReadings.length && !startDate.value && !endDate.value) {
+        startDate.value = new Date(minDate.value as string)
+        endDate.value = new Date(maxDate.value as string)
+      }
     })
 
     const filteredReadings = computed(() => {

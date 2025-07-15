@@ -1,44 +1,50 @@
 <template>
   <div class="devide-list">
-    <v-text-field
-      v-model="search"
-      label="Търси по име"
-      prepend-icon="mdi-magnify"
-      clearable
-    />
-
-    <div class="devide-list__filters d-flex gap-4 mb-4">
-      <v-select
-        v-model="selectedType"
-        :items="store.deviceTypes"
-        label="Филтър по тип"
-        clearable
-      />
-      <v-select
-        v-model="selectedStatus"
-        :items="statuses"
-        label="Филтър по статус"
-        clearable
-      />
-    </div>
+    <v-row>
+      <v-col cols="12" md="3">
+        <v-select
+          v-model="selectedType"
+          :items="store.deviceTypes"
+          label="Филтър по тип"
+          clearable
+        />
+      </v-col>
+      <v-col cols="12" md="3">
+        <v-select
+          v-model="selectedStatus"
+          :items="statuses"
+          label="Филтър по статус"
+          clearable
+        />
+      </v-col>
+      <v-spacer />
+      <v-col cols="12" md="5">
+        <v-text-field
+          v-model="search"
+          label="Търси по име"
+          prepend-icon="mdi-magnify"
+          clearable
+        />
+      </v-col>
+    </v-row>
 
     <v-data-table
       :headers="headers"
       :items="filteredDevices"
       item-value="id"
-      class="elevation-1"
+      class="devices-list__table elevation-1"
       @click:row="handleRowClick"
     >
       <template #item="{ item }">
-        <tr @click="handleRowClick(item)">
+        <tr @click="handleRowClick(item)" class="cursor-pointer">
           <td>{{ item.name }}</td>
           <td>{{ item.type }}</td>
           <td>{{ item.status }}</td>
-          <td>{{ formatDateToBG(item.last_active) }}</td>
+          <td>{{ formatDateTimeToBG(item.last_active) }}</td>
           <td>
-            <v-btn @click.stop="openEditModal(item)"
-              ><v-icon>mdi-pencil</v-icon></v-btn
-            >
+            <v-btn @click.stop="openEditModal(item)">
+              <v-icon>mdi-pencil</v-icon>
+            </v-btn>
           </td>
         </tr>
       </template>
@@ -58,7 +64,7 @@ import { ROUTE_NAMES } from '@/constants/routes'
 const store = useDeviceStore()
 const router = useRouter()
 
-const { formatDateToBG } = useDateFormat()
+const { formatDateTimeToBG } = useDateFormat()
 
 const search = ref('')
 const selectedType = ref('')
@@ -111,12 +117,12 @@ const handleRowClick = (device: Device) => {
 </script>
 
 <style lang="scss" scoped>
-tr:hover {
-  cursor: pointer;
-}
-
-td,
-th {
+::v-deep .v-data-table thead th {
   vertical-align: middle;
+  font-weight: 700;
+  text-transform: uppercase;
+  font-size: 12px;
+  letter-spacing: 0.4px;
+  opacity: 0.8;
 }
 </style>

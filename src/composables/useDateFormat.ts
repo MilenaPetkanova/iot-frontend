@@ -1,10 +1,18 @@
 export function useDateFormat() {
-  function formatDateToBG(dateStr: string | Date): string {
-    const result = new Date(dateStr).toLocaleString('bg-BG')
-    return result
+  function formatDateTimeToBG(dateRaw: Date | string | null): string {
+    const formatDate = dateRaw ? new Date(dateRaw).toLocaleString('bg-BG') : ''
+    return formatDate
+  }
+
+  function formatDateToBG(dateRaw: Date | string | null): string {
+    const formatDate = dateRaw
+      ? new Date(dateRaw).toLocaleDateString('bg-BG')
+      : ''
+    return formatDate
   }
 
   return {
+    formatDateTimeToBG,
     formatDateToBG
   }
 }

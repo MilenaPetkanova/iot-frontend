@@ -16,22 +16,22 @@
           <p>+ validate the edit form</p>
           <p>+ create details page</p>
           <p>+ visualize the additional related mock data</p>
-          <p>- check enhancement, bugs and refactoring tasks</p>
-          <p>- enhance the styles</p>
-          <p>- adjust the responsiveness</p>
-          <p>- check again if all requirements are met</p>
-        </div>
-
-        <h2 class="u-heading-2 mt-6 mb-6 mt-12">Bugs</h2>
-        <div>
-          <p>- in db ids are transformed from numbers to strings</p>
+          <p>+ check enhancement, bugs and refactoring tasks</p>
+          <p>+ enhance the styles</p>
+          <p>+ adjust the responsiveness</p>
+          <p>+ check again if all requirements are met</p>
         </div>
 
         <h2 class="u-heading-2 mt-6 mb-6 mt-12">Enhancements</h2>
         <div>
           <p>- in app add loading animation</p>
-          <p>- in data table center the text and differentiate its header</p>
-          <p>- create pages задание, задачи, решение</p>
+          <p>+ in data table center the text and differentiate its header</p>
+          <p>+ create pages задание, задачи, решение</p>
+        </div>
+
+        <h2 class="u-heading-2 mt-6 mb-6 mt-12">Bugs</h2>
+        <div>
+          <p>- in db.json ids are transformed from numbers to strings</p>
         </div>
 
         <h2 class="u-heading-2 mt-6 mb-6 mt-12">Refactoring</h2>
@@ -45,16 +45,22 @@
         </div>
 
         <h2 class="u-heading-2 mt-6 mb-6 mt-12">Време</h2>
-        <div>
-          <p>12.07 - init - 60 min</p>
-          <p>12.07 - service, store, routing - 40 min</p>
-          <p>12.07 - fix dependency issues - 60 min</p>
-          <p>13.07 - migrate from webpack to vite - 30 min</p>
-          <p>13.07 - service, store, routing - 15 min</p>
-          <p>13.07 - vuetify, table with filters and search - 30 min</p>
-          <p>13.07 - editing data - 60 min</p>
-          <p>13.07 - refactoring - 60 min</p>
-        </div>
+        <ul>
+          <li>init - 60 min</li>
+          <li>service, store, routing - 40 min</li>
+          <li>fix dependency issues - 60 min</li>
+          <li>migrate from webpack to vite - 30 min</li>
+          <li>service, store, routing - 15 min</li>
+          <li>vuetify, table with filters and search - 30 min</li>
+          <li>editing data - 60 min</li>
+          <li>refactoring - 60 min</li>
+          <li>details components - 60 min</li>
+          <li>chart - 120 min</li>
+          <li>static pages - 30 min</li>
+          <li>enhancing styles - 60 min</li>
+          <li>refactoring - 60 min</li>
+          <li><strong>total: 685 min (11 hours and 25 minutes)</strong></li>
+        </ul>
       </v-card-text>
 
       <v-card-actions>

@@ -100,14 +100,14 @@ json-server --watch db.json --port 3001
 - [x] validate the edit form
 - [x] create details page
 - [x] visualize the additional related mock data
-- [ ] check enhancement, bugs and refactoring tasks
-- [ ] enhance the styles
-- [ ] adjust the responsiveness
-- [ ] check again if all requirements are met
+- [x] check enhancement, bugs and refactoring tasks
+- [x] enhance the styles
+- [x] adjust the responsiveness
+- [x] check again if all requirements are met
 
 ### Enhancements
 - [ ] in app add loading animation
-- [ ] in data table center the text and differentiate its header
+- [x] in data table center the text and differentiate its header
 - [x] create pages задание, задачи, решение 
 
 ### Bugs
@@ -122,11 +122,17 @@ json-server --watch db.json --port 3001
 - [x] add enums (minimum for statuses)
 
 ## Време:
-- 12.07 - init - 60 min
-- 12.07 - service, store, routing - 40 min
-- 12.07 - fix dependency issues - 60 min
-- 13.07 - migrate from webpack to vite - 30 min
-- 13.07 - service, store, routing - 15 min
-- 13.07 - vuetify, table with filters and search - 30 min
-- 13.07 - editing data - 60 min
-- 13.07 - refactoring - 60 min
+- init - 60 min
+- service, store, routing - 40 min
+- fix dependency issues - 60 min
+- migrate from webpack to vite - 30 min
+- service, store, routing - 15 min
+- vuetify, table with filters and search - 30 min
+- editing data - 60 min
+- refactoring - 60 min
+- details components - 60 min
+- chart - 120 min
+- static pages - 30 min
+- enhancing styles - 60 min
+- refactoring - 60 min
+total: 685 (11 hours and 25 minutes)
