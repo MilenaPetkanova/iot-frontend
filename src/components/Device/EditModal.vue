@@ -74,6 +74,7 @@ function submit() {
   form.value?.validate()
   if (valid.value) {
     store.updateDevice({ ...localDevice.value })
+    store.selectedDevice = { ...localDevice.value }
   }
 }
 </script>
