@@ -36,7 +36,7 @@
 
         <h2 class="u-heading-2 mt-6 mb-6 mt-12">Refactoring</h2>
         <div>
-          <p>- check if shims files can be added in a folder</p>
+          <p>+ check if shims files can be added in a folder</p>
           <p>+ remove unused fonts</p>
           <p>+ move devices list title in the view</p>
           <p>+ in views rename dashboard to devices</p>

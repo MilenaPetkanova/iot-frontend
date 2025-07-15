@@ -114,7 +114,7 @@ json-server --watch db.json --port 3001
 - [ ] in db ids are transformed from numbers to strings
 
 ### Refactoring
-- [ ] check it shims files can be added in a folder
+- [x] check it shims files can be added in a folder
 - [x] remove unused fonts
 - [x] move devices list title in the view 
 - [x] in views rename dashboard to devices
