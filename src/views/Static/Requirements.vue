@@ -4,7 +4,7 @@
 
     <v-card variant="elevated" class="pa-4">
       <v-card-title class="mb-6">
-        Домашна задача: Dashboard за управление на устройства
+        Dashboard за управление на устройства
       </v-card-title>
 
       <v-card-text>
