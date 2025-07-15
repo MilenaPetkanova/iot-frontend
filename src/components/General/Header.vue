@@ -1,7 +1,7 @@
 <template>
   <v-app-bar absolute>
     <v-container fluid class="d-flex align-center justify-between">
-      <v-app-bar-title class="cursor-pointer" @click="goHome">
+      <v-app-bar-title class="title cursor-pointer" @click="goHome">
         frontend iot
       </v-app-bar-title>
 
@@ -72,3 +72,10 @@ const navLinks = [
   { label: 'Решение', to: { name: 'DevicesList' } }
 ]
 </script>
+
+<style scoped>
+.title {
+  font-family: 'SpaceMonoBold', sans-serif;
+  text-transform: uppercase;
+}
+</style>

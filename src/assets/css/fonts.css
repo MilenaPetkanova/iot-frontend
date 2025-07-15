@@ -60,19 +60,6 @@
 }
 
 @font-face {
-  font-family: 'DrukWideBold';
-  src: url('./../fonts/DrukWideBold/DrukWideBold.ttf') format('truetype');
-  font-display: swap;
-}
-
-
-@font-face {
-  font-family: 'DrukWideBold';
-  src: url('./../fonts/DrukWideBold/DrukWideBold.ttf') format('truetype');
-  font-display: swap;
-}
-
-@font-face {
   font-family: 'SpaceMonoRegular';
   src: url('./../fonts/SpaceMono/SpaceMono-Regular.ttf') format('truetype');
   font-display: swap;
