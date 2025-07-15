@@ -1,6 +1,6 @@
 <template>
   <v-dialog v-model="store.isEditModalOpen" max-width="600px">
-    <v-card>
+    <v-card class="py-2">
       <v-card-title>Редакция на устройство</v-card-title>
 
       <v-card-text>
