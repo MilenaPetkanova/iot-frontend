@@ -1,5 +1,8 @@
 <template>
-  <v-card class="rounded-m pa-4 pb-0 mb-6" v-if="store.selectedDevice">
+  <v-card
+    class="device-dertails rounded-m pa-4 pb-0 mb-6"
+    v-if="store.selectedDevice"
+  >
     <v-row dense class="mb-8">
       <v-col cols="12" sm="12" class="mb-2">
         <v-label
@@ -38,6 +41,15 @@
           v-if="store.deviceReadings"
         />
       </v-col>
+
+      <v-btn
+        @click.stop="openEditModal()"
+        variant="text"
+        append-icon="mdi-pencil"
+        class="device-details__edit-btn"
+      >
+        редактирай
+      </v-btn>
     </v-row>
   </v-card>
 </template>
@@ -74,4 +86,19 @@ const statusColor = computed(() => {
       return 'grey'
   }
 })
+
+const openEditModal = () => {
+  store.isEditModalOpen = true
+}
 </script>
+
+<style lang="scss" scoped>
+.device-details {
+  &__edit-btn {
+    position: absolute;
+    top: 18px;
+    right: 12px;
+    left: auto;
+  }
+}
+</style>

@@ -135,4 +135,4 @@ json-server --watch db.json --port 3001
 - static pages - 30 min
 - enhancing styles - 60 min
 - refactoring - 60 min
-total: 685 (11 hours and 25 minutes)
+- total: 685 (11 hours and 25 minutes)

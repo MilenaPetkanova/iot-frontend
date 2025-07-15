@@ -72,7 +72,6 @@ export const useDeviceStore = defineStore('device', () => {
 
   function closeEditModal() {
     isEditModalOpen.value = false
-    selectedDevice.value = null
   }
 
   return {

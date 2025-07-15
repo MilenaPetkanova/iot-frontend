@@ -2,6 +2,7 @@
   <v-container>
     <ViewTitle :title="store.selectedDevice?.name" hasBackBtn />
     <DeviceDetails />
+    <DeviceEditModal />
 
     <v-overlay
       :model-value="store.isLoading"
@@ -15,6 +16,7 @@
 <script setup lang="ts">
 import ViewTitle from '@/components/General/ViewTitle.vue'
 import DeviceDetails from '@/components/Device/Details.vue'
+import DeviceEditModal from '@/components/Device/EditModal.vue'
 import { useDeviceStore } from '@/stores/deviceStore'
 const store = useDeviceStore()
 </script>
