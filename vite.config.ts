@@ -15,11 +15,4 @@ export default defineConfig({
       '@': path.resolve(__dirname, 'src')
     }
   }
-  // css: {
-  //   preprocessorOptions: {
-  //     scss: {
-  //       additionalData: `@use "vuetify/settings" with ($body-font-family: 'Inter');`
-  //     }
-  //   }
-  // }
 })
