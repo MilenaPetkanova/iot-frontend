@@ -106,7 +106,7 @@ json-server --watch db.json --port 3001
 - [x] check again if all requirements are met
 
 ### Enhancements
-- [ ] in app add loading animation
+- [x] in app add loading animation
 - [x] in data table center the text and differentiate its header
 - [x] create pages задание, задачи, решение 
 

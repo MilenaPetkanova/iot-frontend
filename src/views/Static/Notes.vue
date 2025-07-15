@@ -24,7 +24,7 @@
 
         <h2 class="u-heading-2 mt-6 mb-6 mt-12">Enhancements</h2>
         <div>
-          <p>- in app add loading animation</p>
+          <p>+ in app add loading animation</p>
           <p>+ in data table center the text and differentiate its header</p>
           <p>+ create pages задание, задачи, решение</p>
         </div>
